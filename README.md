@@ -1,2 +1,2 @@
 # python examples
-This repo contains some work I've done in Python. Some content is cut. 
+This repo contains some work I've done in Python. Select content is cut and crawler incoming 
