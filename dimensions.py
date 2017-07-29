@@ -1,6 +1,6 @@
 # @nishantpatel ; July 28, 2017
 # IA - 62: Car dimensions
-# Target file and script located in same dir
+# Target files and script located in same dir
 
 import sys
 
@@ -11,9 +11,9 @@ for args in sys.argv:
 
 	for vehicleDetails in soup.find_all(class_="unit"):
 	    # print vehicleDetails.text.encode('utf-8')
-	    print vehicleDetails.text.split('L ')[0],
+	    print vehicleDetails.text.encode('utf-8').split('L ')[0],
 	    print ",",  
-	    print vehicleDetails.text.replace(" ", "").split('H:')[1][0:14].replace("x", ",")
+	    print vehicleDetails.text.encode('utf-8').replace(" ", "").split('H:')[1][0:14].replace("x", ",")
 
 	# To separate companies
 	print
