@@ -2,15 +2,18 @@
 # IA - 62: Car dimensions
 # Target file and script located in same dir
 
-from bs4 import BeautifulSoup
-with open("alfa-romeo-car-dimensions.html") as fp:
-    soup = BeautifulSoup(fp, "html.parser")
+import sys
 
-for vehicleDetails in soup.find_all(class_="unit"):
-    # print vehicleDetails.text.encode('utf-8')
-    print vehicleDetails.text.split('L ')[0],
-    print ",",  
-    print vehicleDetails.text.replace(" ", "").split('H:')[1][0:14].replace("x", ",")
+for args in sys.argv:
+	from bs4 import BeautifulSoup
+	with open(args) as fp:
+	    soup = BeautifulSoup(fp, "html.parser")
 
-# To separate companies
-print
+	for vehicleDetails in soup.find_all(class_="unit"):
+	    # print vehicleDetails.text.encode('utf-8')
+	    print vehicleDetails.text.split('L ')[0],
+	    print ",",  
+	    print vehicleDetails.text.replace(" ", "").split('H:')[1][0:14].replace("x", ",")
+
+	# To separate companies
+	print
