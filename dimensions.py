@@ -1,5 +1,6 @@
 # @nishantpatel ; July 28, 2017
 # IA - 62: Car dimensions
+# Target file and script located in same dir
 
 from bs4 import BeautifulSoup
 with open("toyota-car-dimensions.html") as fp:
