@@ -11,3 +11,6 @@ for vehicleDetails in soup.find_all(class_="unit"):
     print vehicleDetails.text.split('L ')[0],
     print ",",  
     print vehicleDetails.text.replace(" ", "").split('H:')[1][0:14].replace("x", ",")
+
+# To separate companies
+print
