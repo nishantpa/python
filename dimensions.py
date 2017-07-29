@@ -1,4 +1,4 @@
-# pullup ; @nishantpatel ; July 28, 2017
+# @nishantpatel ; July 28, 2017
 # IA - 62: Car dimensions
 
 from bs4 import BeautifulSoup
