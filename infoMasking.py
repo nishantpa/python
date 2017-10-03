@@ -2,7 +2,7 @@
 # @nishantpatel
 # Mask email and phone number according to the rules
 
-# E:jackAndJill@gmail.com  					    # E:j*****l@gmail.com
+# E:jackAndJill@gmail.com  					    	# E:j*****l@gmail.com
 # P:(333)456-7890 				OUTPUT:			# P:***-***-7890
 # P:+1(333) 456-7890 							# P:+*-***-***-7890
 
