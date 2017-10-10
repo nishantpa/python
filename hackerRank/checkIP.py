@@ -1,6 +1,6 @@
 # << Swami Shreeji >>
 # @nishantpatel
-# Complete the function below.
+# Complete the function below. Check if IPv4 or IPv6 - HackerRank challenge
 
 import sys
 import os
