@@ -1,5 +1,6 @@
 # << Swami Shreeji >> 
-# @nishantpatel ; 10 Oct 2017 response.css('div.required a::text').extract()
+# @nishantpatel ; 10 Oct 2017
+# Hard-coded test URL. Will extract URLs from text file soon
 
 import sys
 import scrapy
