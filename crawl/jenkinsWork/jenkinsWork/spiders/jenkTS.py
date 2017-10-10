@@ -1,6 +1,6 @@
 # << Swami Shreeji >> 
 # @nishantpatel ; 10 Oct 2017
-# Hard-coded test URL. Will extract URLs from text file soon
+# To run from shell --> scrapy crawl jenkTS -a filename=test.txt
 
 import sys
 import scrapy

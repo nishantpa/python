@@ -7,7 +7,6 @@ https://plugins.jenkins.io/ansicolor
 https://plugins.jenkins.io/ant
 https://plugins.jenkins.io/antisamy-markup-formatter
 https://plugins.jenkins.io/authentication-tokens
-https://plugins.jenkins.io/#aws-device-farm
 https://plugins.jenkins.io/bouncycastle-api
 https://plugins.jenkins.io/branch-api
 https://plugins.jenkins.io/build-flow-plugin
@@ -81,7 +80,6 @@ https://plugins.jenkins.io/jira-trigger
 https://plugins.jenkins.io/job-dsl
 https://plugins.jenkins.io/job-import-plugin
 https://plugins.jenkins.io/jobConfigHistory
-https://plugins.jenkins.io/#jobgenerator
 https://plugins.jenkins.io/jquery
 https://plugins.jenkins.io/jquery-detached
 https://plugins.jenkins.io/jsch
@@ -120,7 +118,6 @@ https://plugins.jenkins.io/release
 https://plugins.jenkins.io/run-condition
 https://plugins.jenkins.io/scm-api
 https://plugins.jenkins.io/script-security
-https://plugins.jenkins.io/# scriptler
 https://plugins.jenkins.io/simple-build-for-pipeline
 https://plugins.jenkins.io/slave-status
 https://plugins.jenkins.io/sonar
