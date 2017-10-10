@@ -7,9 +7,11 @@ import scrapy
 
 class QuotesSpider(scrapy.Spider):
     name = "jenkTS"
-    start_urls = [
-        'https://plugins.jenkins.io/android-lint',
-    ]
+   
+    def __init__(self, filename=None):
+        if filename:
+            with open(filename, 'r') as f:
+                self.start_urls = f.readlines()
 
     def parse(self, response):
         yield {
