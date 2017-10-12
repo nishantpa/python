@@ -22,4 +22,9 @@ This file will contain a list of each plugin ID's dependencies. The next job is
 to find those mismatched dependencies and output that in a neat format. It would
 be easier to grab those dependencies that are repeated within the plugDeps.json 
 file and check their versions to see if there's a mismatch. Output that in a 
-neat format
+neat format.
+
+Using a json parser called jq, I was able to narrow down those dependencies that 
+match across the set of all plugins.
+
+jq -r '.[] | select(.dependency[0]) | (.dependency|tostring|ltrimstr("[")|rtrimstr("]")) + ", \"plugID\": "+ (.plugID|tostring) | @text' plugDeps.json > mismatchedVers.txt
