@@ -1,7 +1,7 @@
 # << Swami Shreeji >> 
 # @nishantpatel ; 10 Oct 2017
 # To run from shell --> scrapy crawl jenkTS -a filename=test.txt 
-	# where test.txt is the 
+	# where test.txt is the plugins file with associated URLs
 
 import sys
 import scrapy
