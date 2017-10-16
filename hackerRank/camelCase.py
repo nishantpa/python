@@ -3,5 +3,10 @@
 # HackerRank CamelCase Challenge - Algorithms --> Strings --> CamelCase
 
 import sys
+import string
 
-print "Hello world"
+# Take test input
+testInput = raw_input()
+numWords = len(filter(lambda x: x in string.uppercase, testInput)) + 1
+
+print numWords
