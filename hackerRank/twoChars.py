@@ -10,11 +10,9 @@ import string
 testStrLen = raw_input()
 testStr = raw_input()
 
+# Extract unique chars
 testStrInfo = collections.Counter(testStr)
 uniqueLetters = list(testStrInfo)
-
-# TESTING
-print uniqueLetters
 
 # Get all pair combos
 storeCombos = list()
@@ -23,9 +21,8 @@ for pair in combinations(uniqueLetters, 2):
 	 storeCombos.append(pairedUp)
 
 # Produce all possible strings of 2 unique letters from testStr
+storePotentialStrings = list()
 for elem in storeCombos:
 	result = ''.join(c for c in testStr if c == (elem[0]) or c == (elem[1]))
-	print result
+	storePotentialStrings.append(result)
 
-
-	#potentialAns = testStr.strip(everything except pair[0] and pair[1])
