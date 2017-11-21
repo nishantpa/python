@@ -1,6 +1,7 @@
 # << Swami Shreeji >>
 # @nishantpatel ; 16 Oct 2017
 # Algorithms --> Strings --> twoChars beabeefeab
+# NOTE: Lost my place. Came back to this after months
 
 import sys
 import collections
