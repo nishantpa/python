@@ -1,6 +1,6 @@
 # << Swami Shreeji >>
 # @nishantpatel ; 16 Oct 2017
-# Algorithms --> Strings --> twoChars
+# Algorithms --> Strings --> twoChars beabeefeab
 
 import sys
 import collections
@@ -26,3 +26,19 @@ for elem in storeCombos:
 	result = ''.join(c for c in testStr if c == (elem[0]) or c == (elem[1]))
 	storePotentialStrings.append(result)
 
+# Filter out nonalternating character strings
+for elem in storePotentialStrings:
+	i = 1
+	temp = elem[0]
+	char = elem[i]
+	if char == temp:
+		storePotentialStrings.remove(elem)
+	for char in elem[1:]:
+		if char == temp:
+			storePotentialStrings.remove(elem)
+			temp = char
+		break
+	
+
+for elem in storePotentialStrings:
+	print elem
