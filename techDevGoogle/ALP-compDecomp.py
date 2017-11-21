@@ -4,8 +4,8 @@
 	# Compression and Decompression
 
 # Test Cases & output:
-# 3[abc]4[ab]c		--> abcabcabcababababc
-# 2[3[a]b]			--> aaabaaab
+# 3[abc]4[ab]c		--> abcabcabcababababc 	[PASSES]
+# 2[3[a]b]			--> aaabaaab 			[PENDING]
 
 import sys
 import string
@@ -19,7 +19,7 @@ def decompress(args):
 	currString = ""
 	currInt = ""
 	repeater = 0
-	
+
 	for char in args:
 		if char.isdigit():
 			currInt = currInt + char
