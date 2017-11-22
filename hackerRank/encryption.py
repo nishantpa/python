@@ -1,17 +1,16 @@
 # << Swami Shreeji >>
 # 21 Nov 2017
 # Algo --> Implementation --> Encryption
-# What's left? Pretty print it
 
 import sys
 import string
 import math
 
 # Cases
-case0 = "ifmanwasmeanttostayonthegroundgodwouldhavegivenusroots" # 54
-case1 = "haveaniceday" # 12
-case2 = "feedthedog" # 10
-case3 = "chillout" # 8
+case0 = "ifmanwasmeanttostayonthegroundgodwouldhavegivenusroots" # 54 PASS
+case1 = "haveaniceday" # 12 PASS 
+case2 = "feedthedog" # 10 PASS
+case3 = "chillout" # 8 FAILS
 
 def encrypt(args):
 	# Step 1: Remove all whitespace
@@ -24,7 +23,6 @@ def encrypt(args):
 	if rows * rows <= argsLen:
 		cols = rows + 1
 
-	print cols, rows
 	# Define rect dimensions
 	rect = [["" for x in range(rows)] for x in range(cols)]
 
@@ -38,8 +36,17 @@ def encrypt(args):
 			if colNum == cols:
 				rowNum += 1
 				colNum = 0
-		print rect
-		break
-	
 
+		# Filter it. Ugly but works ... Come back to this
+		antiSol = (', '.join(map(str, rect)))
+		antiSol = antiSol.replace("],", "|")
+		antiSol = antiSol.translate(None, '[,\'] ')
+		antiSol = antiSol.replace("|", " ")
+
+		print antiSol
+		break
+
+encrypt(case0)	
+encrypt(case1)	
 encrypt(case2)	
+# encrypt(case3) FAILS HERE	
