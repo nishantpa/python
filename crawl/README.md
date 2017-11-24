@@ -1,7 +1,7 @@
-<< Swami Shreeji >>
+<< DnD >>
 @nishantpatel ; 12 Oct 2017
 
-Plan of Attack:
+# Plan of Attack (Scrape and search):
 
 The jenkPlug.fail file is the file that has errors when attempting to update 
 all plugins at once. There are certain plugins that require a specific 
