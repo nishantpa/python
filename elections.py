@@ -8,20 +8,22 @@ import csv
 import sys
 from collections import defaultdict
 
-
-def mostVoted():
-	# Holds 180957 CANDIDATE and VOTES. Dups exist
+# Read once, power away after
+def preWork():
+	# Holds OFFICE, CANDIDATE and VOTES. Dups exist
 	data = []
-
 	with open('2016_general.csv') as csvfile:
 	    reader = csv.DictReader(csvfile)
 	    for row in reader:
-	        candAndVotes = [row['CANDIDATE'], int (row['VOTES'])] 
+	        candAndVotes = [row['OFFICE'], row['CANDIDATE'], int (row['VOTES'])] 
 	        data.append(candAndVotes)
+	return data
 
+
+def mostVoted(args):
 	result = defaultdict(int)
-	for item in data:
-		cand, votes = item
+	for item in args:
+		office, cand, votes = item
 		result[(cand)] += votes
 
 	# print dict(result)
@@ -32,5 +34,7 @@ def mostVoted():
 def pAndVPVotes():
 	print "Hello world"
 
-mostVoted()
+
+csvData = preWork()
+mostVoted(csvData)
 pAndVPVotes()
