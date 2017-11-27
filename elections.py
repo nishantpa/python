@@ -1,8 +1,8 @@
 # << Swami Shreeji >>
-# @nishantpatel ; 23 Nov 2017
+# @nishantpatel ; 23 Nov 2017, 27 Nov 2017
 # TASK:
 # 	Get the candidate with the most votes. DONE
-# 	Get the votes of all candidates who ran for president and vp PENDING
+# 	Get the votes of all candidates who ran for president and vp DONE
 
 import csv
 import sys
@@ -19,7 +19,7 @@ def preWork():
 	        data.append(candAndVotes)
 	return data
 
-
+# Return candidate with most votes
 def mostVoted(args):
 	result = defaultdict(int)
 	for item in args:
@@ -30,11 +30,17 @@ def mostVoted(args):
 	mostVotedCand = max(result, key=result.get)
 	print mostVotedCand
 
+# Get the votes of all candidates who ran for president
+def pAndVPVotes(args):
+	result = defaultdict(int)
+	for item in args:
+		if item[0] == 'PRESIDENT AND VICE PRESIDENT OF THE UNITED STATES':
+			office, cand, votes = item
+			result[(cand)] += votes
 
-def pAndVPVotes():
-	print "Hello world"
+	print dict(result)
 
 
 csvData = preWork()
 mostVoted(csvData)
-pAndVPVotes()
+pAndVPVotes(csvData)
