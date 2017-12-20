@@ -1,7 +1,8 @@
 # << Swami Shreeji >>
 # @nishantpatel ; 16 Oct 2017, 20 Dec 2017 COMPLETE
 # Algorithms --> Strings --> twoChars beabeefeab
-# Test case: beabeefeab
+# Test case1: beabeefeab
+# Test case28: tlymrvjcylhqifsqtyyzfaugtibkkghfhyzxqbsizkjguqlqwwetyofqihtpkmpdlgthfybfhhmjerjdkybwppwrdapirukcshkpngayrdruanjtziknnwxmsjpnuswllymhkmztsrcwwzmlbcoakswwffveobbvzinkhnmvwqhpfednhsuzmffaebi
 
 import sys
 import collections
@@ -33,9 +34,11 @@ temp = ""
 for elem in storePotentialStrings:
 	for char in elem[1:]:
 		if temp == char:
+			print elem, 
 			storePotentialStrings.remove(elem)
 			break
 		else:
 			temp = char
 
-print max(storePotentialStrings, key=len)
+# Print answer. Remove len to get element
+print len( max(storePotentialStrings, key=len) )
