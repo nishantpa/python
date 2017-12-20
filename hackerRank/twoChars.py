@@ -1,7 +1,7 @@
 # << Swami Shreeji >>
-# @nishantpatel ; 16 Oct 2017
+# @nishantpatel ; 16 Oct 2017, 20 Dec 2017 COMPLETE
 # Algorithms --> Strings --> twoChars beabeefeab
-# NOTE: Lost my place. Came back to this after months
+# Test case: beabeefeab
 
 import sys
 import collections
@@ -22,24 +22,20 @@ for pair in combinations(uniqueLetters, 2):
 	 storeCombos.append(pairedUp)
 
 # Produce all possible strings of 2 unique letters from testStr
+# Not all of these conform to the answer
 storePotentialStrings = list()
 for elem in storeCombos:
 	result = ''.join(c for c in testStr if c == (elem[0]) or c == (elem[1]))
 	storePotentialStrings.append(result)
 
-# Filter out nonalternating character strings
+# Remove illegal strings from storePotentialAnswers
+temp = ""
 for elem in storePotentialStrings:
-	i = 1
-	temp = elem[0]
-	char = elem[i]
-	if char == temp:
-		storePotentialStrings.remove(elem)
 	for char in elem[1:]:
-		if char == temp:
+		if temp == char:
 			storePotentialStrings.remove(elem)
+			break
+		else:
 			temp = char
-		break
-	
 
-for elem in storePotentialStrings:
-	print elem
+print max(storePotentialStrings, key=len)
